@@ -61,7 +61,7 @@
 						<br />
 						вашого бізнесу
 					</h1>
-					<button type="button" class="button-primary">Замовити послугу</button>
+					<button type="button" class="button-primary" data-modal-open>Замовити послугу</button>
 				</div>
 			</section>
 			<!-- Плюсы компании -->
@@ -328,5 +328,11 @@
 				</div>
 			</div>
 		</footer>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button class="modal-botton" data-modal-close><img src="./imeges/close.png" alt=""></button>
+			</div>
+		</div>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
