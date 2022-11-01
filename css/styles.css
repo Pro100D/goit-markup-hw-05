@@ -3,6 +3,7 @@
 	--title-text-color: #212121;
 	--accent-color: #2196f3;
 	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--white-color: #ffffff;
 }
 body {
 	font-family: roboto, sans-serif;
@@ -38,7 +39,7 @@ img {
 	color: var(--accent-color);
 }
 .logo-footer {
-	color: #ffffff;
+	color: var(--white-color);
 
 	font-family: raleway, cursive;
 
@@ -81,12 +82,15 @@ img {
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
+
 	text-decoration: none;
+	
+	transition: color 250ms var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
 	color: var(--accent-color);
-	transition: color 250ms var(--timing-function);
+	
 }
 
 .site-nav .link.current {
@@ -133,20 +137,23 @@ img {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	text-decoration: none;
+
+	transition: color 250ms var(--timing-function);
 }
 .aside-list .link:hover,
 .aside-list .link:focus {
 	color: var(--accent-color);
-	transition: color 250ms var(--timing-function);
 }
 .aside-link:hover > .aside-icon,
 .aside-link:focus > .aside-icon {
 	fill: var(--accent-color);
-	transition: fill 250ms var(--timing-function);
 }
 .aside-icon {
 	fill: var(--primary-text-color);
+
 	margin-right: 10px;
+
+	transition: fill 250ms var(--timing-function);
 }
 
 /* hero */
@@ -166,7 +173,7 @@ img {
 }
 
 .hero-title {
-	color: #ffffff;
+	color: var(--white-color);
 
 	margin-top: 0;
 	margin-bottom: 30px;
@@ -205,18 +212,19 @@ img {
 
 	border-radius: 4px;
 	border: 0;
+
+	transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+		box-shadow 250ms var(--timing-function);
 }
 .button:hover,
 .button:focus {
 	background-color: var(--accent-color);
-	color: #ffffff;
+	color: var(--white-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
-		box-shadow 250ms var(--timing-function);
 }
 
 .button-primary {
-	color: #ffffff;
+	color: var(--white-color);
 	background-color: var(--accent-color);
 	border-radius: 4px;
 	border: 0;
@@ -238,7 +246,7 @@ img {
 	justify-content: center;
 }
 .active {
-	color: #ffffff;
+	color: var(--white-color);
 	background-color: var(--accent-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -268,7 +276,7 @@ img {
 	width: 528px;
 	height: 581px;
 
-	background-color: #ffffff;
+	background-color: var(--white-color);
 }
 .modal-botton {
 	position: absolute;
@@ -278,7 +286,7 @@ img {
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 
-	background-color: #ffffff;
+	background-color: var(--white-color);
 
 	cursor: pointer;
 
@@ -400,7 +408,7 @@ img {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 
-	color: #ffffff;
+	color: var(--white-color);
 }
 /* Team */
 
@@ -421,7 +429,7 @@ img {
 }
 .team-list .item {
 	border-radius: 0px 0px 4px 4px;
-	background-color: #ffffff;
+	background-color: var(--white-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team .team-title {
@@ -466,25 +474,27 @@ img {
 	height: 44px;
 
 	border-radius: 50%;
+
+	transition: background-color 250ms var(--timing-function);
 }
 
 .networks-link:hover,
 .networks-link:focus {
 	background-color: var(--accent-color);
-	transition: background-color 250ms var(--timing-function);
-}
-.networks-link:hover > .networks-icon,
-.networks-link:focus > .networks-icon {
-	fill: #ffffff;
-	transition: fill 250ms var(--timing-function);
 }
 
 .networks-icon {
 	width: 20px;
 	height: 20px;
-	fill: #afb1b8;
-}
 
+	fill: #afb1b8;
+
+	transition: fill 250ms var(--timing-function);
+}
+.networks-link:hover > .networks-icon,
+.networks-link:focus > .networks-icon {
+	fill: var(--white-color);
+}
 /* Company */
 .company {
 	padding-top: 94px;
@@ -501,23 +511,28 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	width: 170px;
 	height: 92px;
+
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
+
+	transition: border 250ms var(--timing-function);
 }
 .company-link:hover {
 	border: 1px solid var(--accent-color);
-	transition: border 250ms var(--timing-function);
 }
 .company-icon {
 	width: 106px;
 	height: 60px;
+
 	fill: #afb1b8;
+
+	transition: fill 250ms var(--timing-function);
 }
 .company-link:hover > .company-icon {
 	fill: var(--accent-color);
-	transition: fill 250ms var(--timing-function);
 }
 /* portfolio */
 .portfolio {
@@ -593,16 +608,14 @@ img {
 }
 .overley-text {
 	margin: 0;
-	position: absolute;
 
-	width: 100%;
-	height: 100%;
-
-	color: #ffffff;
+	color: var(--white-color);
 
 	font-size: 18px;
 	line-height: 1.56;
 	letter-spacing: 0.03em;
+
+	padding: 63px 24px;
 }
 .portfolio-link {
 	text-decoration: none;
@@ -613,7 +626,6 @@ img {
 }
 .portfolio-link:hover {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-	transition: box-shadow 250ms var(--timing-function);
 }
 /* footer */
 .footer {
@@ -622,7 +634,7 @@ img {
 	padding-bottom: 60px;
 }
 .footer-text {
-	color: #ffffff;
+	color: var(--white-color);
 
 	font-size: 14px;
 	line-height: 1.71;
@@ -645,12 +657,12 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	text-decoration: none;
+	transition: color 250ms var(--timing-function);
 }
 
 .footer-link:hover,
 .footer-limk:focus {
 	color: var(--accent-color);
-	transition: color 250ms var(--timing-function);
 }
 .footer-content {
 	display: flex;
@@ -668,7 +680,7 @@ img {
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 
-	color: #ffffff;
+	color: var(--white-color);
 	margin-bottom: 20px;
 	margin-top: 0;
 }
@@ -689,13 +701,14 @@ img {
 
 	border-radius: 50%;
 	background: rgba(255, 255, 255, 0.1);
+
+	transition: background-color 250ms var(--timing-function);
 }
 .socials-link:hover {
 	background-color: var(--accent-color);
-	transition: background-color 250ms var(--timing-function);
 }
 .socials-icon {
 	width: 20px;
 	height: 20px;
-	fill: #ffffff;
+	fill: var(--white-color);
 }
